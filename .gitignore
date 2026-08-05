@@ -1,0 +1,26 @@
+# Node
+**/node_modules/
+
+# Environment
+.env
+.env.*
+
+# Logs
+*.log
+
+# Terraform
+**/.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+
+# Build
+dist/
+build/
+
+# OS
+.DS_Store
+
+# AWS credentials
+terraform/*accessKeys.csv
+*.csv
