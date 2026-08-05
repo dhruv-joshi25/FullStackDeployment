@@ -1,26 +1,29 @@
 # Node
-**/node_modules/
+node_modules/
 
-# Environment
+# Environment files
 .env
 .env.*
+
+# Terraform
+.terraform/
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.*
+terraform.tfvars
 
 # Logs
 *.log
 
-# Terraform
-**/.terraform/
-*.tfstate
-*.tfstate.*
-.terraform.lock.hcl
+# VS Code
+.vscode/
 
-# Build
-dist/
-build/
-
-# OS
+# macOS
 .DS_Store
 
-# AWS credentials
-terraform/*accessKeys.csv
-*.csv
+# SSH
+*.pem
+*.ppk
+*.key
+id_rsa
+id_rsa.pub

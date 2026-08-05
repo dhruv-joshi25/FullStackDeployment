@@ -15,8 +15,11 @@ resource "aws_instance" "this" {
   subnet_id              = var.subnet_id
   vpc_security_group_ids = [var.security_group_id]
   iam_instance_profile   = var.instance_profile_name
+  key_name               = var.key_name
 
   tags = {
     Name = "${var.project_name}-server"
   }
 }
+
+
