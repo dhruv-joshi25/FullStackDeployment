@@ -12,8 +12,15 @@ node_modules/
 *.tfstate.*
 terraform.tfvars
 
+#ansible
+inventory
+
 # Logs
 *.log
+
+
+Secrets
+
 
 # VS Code
 .vscode/

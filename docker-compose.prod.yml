@@ -1,0 +1,22 @@
+services:
+  mongodb:
+    image: mongo:8
+    container_name: mongodb
+    restart: always
+    ports:
+      - "27017:27017"
+
+  backend:
+    image: dhruvjoshi4/fullstackapp-backend:latest
+    container_name: backend
+    ports:
+      - "4000:4000"
+    depends_on:
+      - mongodb
+  frontend:
+    image: dhruvjoshi4/fullstackapp-frontend:latest
+    container_name: frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend

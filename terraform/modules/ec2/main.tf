@@ -1,16 +1,15 @@
-data "aws_ami" "amazon_linux" {
+data "aws_ami" "rhel9" {
   most_recent = true
-
-  owners = ["amazon"]
+  owners      = ["309956199498"]
 
   filter {
     name   = "name"
-    values = ["al2023-ami-*-x86_64"]
+    values = ["RHEL-9.*_HVM-*-x86_64-*"]
   }
 }
 
 resource "aws_instance" "this" {
-  ami                    = data.aws_ami.amazon_linux.id
+  ami                    = data.aws_ami.rhel9.id
   instance_type          = "t2.micro"
   subnet_id              = var.subnet_id
   vpc_security_group_ids = [var.security_group_id]

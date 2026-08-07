@@ -28,7 +28,7 @@ module "ec2" {
   subnet_id             = module.vpc.subnet_id
   security_group_id     = module.security_group.security_group_id
   instance_profile_name = module.iam.instance_profile
-  key_name               = module.keypair.key_name
+  key_name              = module.keypair.key_name
 }
 
 module "keypair" {
